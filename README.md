@@ -8,6 +8,8 @@ Create a maven project using quickstart 1.4 archetype.
 $ mvn archetype:generate -DgroupId=org.rogamba.mavenhello -DartifactId=maven-hello -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
 ```
 
+### Modify code and add dependencies
+
 Modify /src/main/java/org/rogamba/mavenhello/App.java, add two lines of code to use slf4j logger:
 
 ```java
@@ -33,6 +35,8 @@ Add slf4j dependencies to the pom.xml file, remove "test" from the scope tag:
 </dependency>
 ```
 
+### Compile and build
+
 Compile and download dependencies with:
 
 ```shell
@@ -45,11 +49,15 @@ Package the application to a .jar file
 $ mvn package
 ```
 
-Execute the application specifying the jar file to include in the classpath:
+### Execute
+
+Run the application specifying the jar file to include in the classpath:
 
 ```shell
 $ java -cp target/maven-hello-1.0-SNAPSHOT.jar: org.rogamba.mavenhello.App
 ```
+
+### Error
 
 Output
 ```text
